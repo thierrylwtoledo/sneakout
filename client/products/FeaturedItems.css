@@ -1,0 +1,31 @@
+
+    #featured-items {
+        background-color: #f5f5f5;
+    }
+
+    #item {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        /* height: 100vh; */
+
+        font-family: Arial, sans-serif;
+
+        padding: 20px 5px;
+
+        margin: 20px;
+        
+        /* height: 300px; */
+        border-radius: 5px;
+        border-color: black;
+        border-style: solid;
+    }
+
+    #details:hover {
+        font-weight: bold;
+    }
+
+    img {
+        height: 200px;
+    }
