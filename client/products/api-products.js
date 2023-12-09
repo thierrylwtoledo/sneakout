@@ -1,6 +1,6 @@
 const create = async (sneaker) => {
     try {
-        let response = await fetch('http://localhost:3000/api/products/', {
+        let response = await fetch('/api/products/', {
             method: 'POST',
             headers: {
                 'Accept': 'application/json',
@@ -20,7 +20,7 @@ const create = async (sneaker) => {
 
 const list = async (signal) => {
     try {
-        let response = await fetch('http://localhost:3000/api/products/', {
+        let response = await fetch('/api/products/', {
             method: 'GET',
             signal: signal,
             mode: "cors",
@@ -33,7 +33,7 @@ const list = async (signal) => {
 
 const update = async (sneaker) => {
     try {
-        let response = await fetch('http://localhost:3000/api/products/', {
+        let response = await fetch('/api/products/', {
             method: 'PUT',
             headers: {
                 'Accept': 'application/json',
@@ -50,7 +50,7 @@ const update = async (sneaker) => {
 
 const remove = async (sneaker) => {
     try {
-        let response = await fetch('http://localhost:3000/api/products/', {
+        let response = await fetch('/api/products/', {
             method: 'DELETE',
             headers: {
                 'Accept': 'application/json',

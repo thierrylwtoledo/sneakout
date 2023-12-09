@@ -1,6 +1,6 @@
 const signin = async (user) => {
     try {
-        let response = await fetch('http://localhost:3000/api/auth/signin/', {
+        let response = await fetch('/api/auth/signin/', {
             method: "POST"
             ,headers: {
                 "Accept": "application/json",
@@ -18,7 +18,7 @@ const signin = async (user) => {
 }
 const signout = async () => {
     try {
-        let response = await fetch('http://localhost:3000/api/auth/signout/', {
+        let response = await fetch('/api/auth/signout/', {
             method: 'GET',
             mode: 'cors'
         })

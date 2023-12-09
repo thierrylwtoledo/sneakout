@@ -1,7 +1,7 @@
 
 const create = async (user) => {
     try {
-        let response = await fetch('http://localhost:3000/api/users/', {
+        let response = await fetch('/api/users/', {
           method: 'POST',
           headers: {
             'Accept': 'application/json',
@@ -22,7 +22,7 @@ const create = async (user) => {
   
   const list = async (signal) => {
     try {
-      let response = await fetch('http://localhost:3000/api/users/', {
+      let response = await fetch('/api/users/', {
         method: 'GET',
         signal: signal,
         mode: "cors",
@@ -36,7 +36,7 @@ const create = async (user) => {
   
   const update = async (user) => {
     try {
-      let response = await fetch('http://localhost:3000/api/users/', {
+      let response = await fetch('/api/users/', {
         method: 'PUT',
         headers: {
           'Accept': 'application/json',
@@ -54,7 +54,7 @@ const create = async (user) => {
   
   const remove = async (user) => {
     try {
-      let response = await fetch('http://localhost:3000/api/users/', {
+      let response = await fetch('/api/users/', {
         method: 'DELETE',
         headers: {
           'Accept': 'application/json',
