@@ -7,8 +7,12 @@ const helmet = require('helmet');
 const userRoutes = require('./routes/user.routes.js');
 const authRoutes = require('./routes/auth.routes.js');
 const prodRoutes = require('./routes/products.routes.js');
+const path = require('node:path');
 
 const app = express();
+
+const CURRENT_WORKING_DIR = process.cwd();
+app.use(express.static(path.join(CURRENT_WORKING_DIR, "dist/app")));
 
 app.use(cors({
     origin: 'http://localhost:5173',
