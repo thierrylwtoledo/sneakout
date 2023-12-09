@@ -2,6 +2,7 @@
   "name": "sneakout",
   "version": "1.0.0",
   "description": "This is part b of group 1's group project in COMP229(Web Application Development).",
+  "main": "index.js",
   "devDependencies": {
     "@babel/core": "^7.23.3",
     "@babel/preset-env": "^7.22.5",
