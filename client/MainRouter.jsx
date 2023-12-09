@@ -1,5 +1,5 @@
 import React from "react";
-import { Route, Switch } from "react-router-dom";
+import { Route, Routes } from "react-router-dom";
 import Home from "./core/Home";
 import Signup from "./user/Signup";
 import Signin from './auth/Signin';
@@ -14,16 +14,16 @@ const MainRouter = () => {
   return (
     <div>
       <Menu />
-      <Switch>
-      <Route exact path="/" component={Home}/>
-        <Route path="/user" component={UpdateUser}/>
-        <Route path="/signup" component={Signup}/>
-        <Route path="/signin" component={Signin}/>
-        <Route path="/featureditems" component={FeaturedItems}/>
-        <Route path="/edititems" component={EditItems}/>
-        <Route path="/createitems" component={CreateItems}/>
-        <Route path="/removeitems" component={RemoveItems}/>
-      </Switch>
+      <Routes>
+      <Route exact path="/" element={<Home/>}/>
+        <Route path="/user" element={<UpdateUser/>}/>
+        <Route path="/signup" element={<Signup/>}/>
+        <Route path="/signin" element={<Signin/>}/>
+        <Route path="/featureditems" element={<FeaturedItems/>}/>
+        <Route path="/edititems" element={<EditItems/>}/>
+        <Route path="/createitems" element={<CreateItems/>}/>
+        <Route path="/removeitems" element={<RemoveItems/>}/>
+      </Routes>
     </div>
   );
 };

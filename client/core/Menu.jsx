@@ -6,24 +6,17 @@ import IconButton from '@material-ui/core/IconButton'
 import HomeIcon from '@material-ui/icons/Home'
 import Button from '@material-ui/core/Button'
 import auth from './../auth/auth-helper'
-import { Link, withRouter } from 'react-router-dom'
+import { Link, useNavigate, useLocation } from 'react-router-dom'
 
-const isActive = (history, path) => {
-  if (history.location.pathname == path)
-    return { color: '#bef67a' }
-  else
-    return { color: '#ffffff' }
-}
-const isPartActive = (history, path) => {
-  if (history.location.pathname.includes(path))
-    return { color: '#bef67a' }
-  else
-    return { color: '#ffffff' }
-}
-// const buttonCSS = {
-//   align
-// }
-const Menu = withRouter(({ history }) => (
+const isActive = (location, path) => {
+  return location.pathname === path ? { color: '#bef67a' }: { color: '#ffffff' }
+};
+
+export default function Menu(){ 
+  const navigate = useNavigate();
+  const location = useLocation();
+
+  return(
   <AppBar position="static">
     <Toolbar>
       <Typography variant="h6" color="inherit">
@@ -79,6 +72,5 @@ const Menu = withRouter(({ history }) => (
       </span></div>
     </Toolbar>
   </AppBar>
-))
-
-export default Menu
+  )
+      };

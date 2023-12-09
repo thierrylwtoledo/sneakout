@@ -6,7 +6,6 @@ import react from '@vitejs/plugin-react';
 
 const { PORT = 3000 } = process.env;
 
-// https://vitejs.dev/config/
 export default defineConfig({
   base: './',
   plugins: [react()],
